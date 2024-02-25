@@ -6,7 +6,6 @@ import {Navbar} from "widgets/Navbar";
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 import ThemeLightDarkIcon from 'shared/assets/icons/theme-light-dark.svg'
 
-
 export const App = () => {
     const {theme} = useTheme()
 
