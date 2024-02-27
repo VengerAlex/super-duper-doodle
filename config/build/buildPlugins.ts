@@ -15,6 +15,7 @@ export const buildPlugins = ({paths, mode, isDev}: BuildOptions): webpack.Webpac
         new Dotenv({path: `./.env.${mode}`}),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
