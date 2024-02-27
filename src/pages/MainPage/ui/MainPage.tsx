@@ -1,5 +1,3 @@
-const MainPage = () => {
-    return <h1>MainPage</h1>
-}
+const MainPage = () => <h1>MainPage</h1>;
 
-export default MainPage
+export default MainPage;
