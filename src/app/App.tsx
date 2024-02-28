@@ -10,7 +10,7 @@ export const App = () => {
     const { theme } = useTheme();
 
     return (
-        <div className={classNames('dd', {}, [theme])}>
+        <div className={classNames('app', {}, [theme])}>
 
             <Suspense fallback={<h1>Loading..</h1>}>
                 <Navbar />

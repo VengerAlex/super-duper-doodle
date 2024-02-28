@@ -44,6 +44,8 @@ module.exports = {
         'react/no-array-index-key': 'warn',
         'react/jsx-key': 'error',
         'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
+        'no-restricted-globals': 'warn',
     },
     globals: {
         __IS_DEV__: true,
