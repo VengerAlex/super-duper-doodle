@@ -43,7 +43,7 @@ module.exports = {
         'default-param-last': 'warn',
         'react/no-array-index-key': 'warn',
         'react/jsx-key': 'error',
-        'i18next/no-literal-string': ['warn', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
+        'i18next/no-literal-string': ['warn', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }],
         'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
         'no-restricted-globals': 'warn',
     },
