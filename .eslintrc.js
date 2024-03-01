@@ -43,11 +43,19 @@ module.exports = {
         'default-param-last': 'warn',
         'react/no-array-index-key': 'warn',
         'react/jsx-key': 'error',
-        'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        'i18next/no-literal-string': ['warn', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
         'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
         'no-restricted-globals': 'warn',
     },
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };

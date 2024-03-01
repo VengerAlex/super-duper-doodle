@@ -13,6 +13,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 
     return (
         <Button
+            data-testid="changeTheme"
             className={classNames('', {}, [className])}
             onClick={onThemeChange}
         >
