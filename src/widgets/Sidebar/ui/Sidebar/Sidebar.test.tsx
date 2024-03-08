@@ -1,10 +1,10 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { Sidebar } from 'widgets/Sidebar';
-import { renderWIthTranslations } from 'shared/lib/tests/renderWIthTranslations';
+import { componentRender } from 'shared/config/tests/componentRender/componentRender';
 
 describe('Sidebar', () => {
     test('renders theme & lang switcher with toggle button', () => {
-        renderWIthTranslations(<Sidebar />);
+        componentRender(<Sidebar />);
 
         expect(screen.getByTestId('toggleSidebar')).toBeInTheDocument();
         expect(screen.getByTestId('changeTheme')).toBeInTheDocument();
@@ -12,7 +12,7 @@ describe('Sidebar', () => {
     });
 
     test('toggle sidebar functionality', () => {
-        renderWIthTranslations(<Sidebar />);
+        componentRender(<Sidebar />);
         const sidebar = screen.getByTestId('sidebar');
 
         const toggleSidebarButton = screen.getByTestId('toggleSidebar');
