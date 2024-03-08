@@ -22,11 +22,19 @@ jobs:
          run : npm install
       -  name: 🚀 Building project
          run : npm run build:prod
+
       -  name: 🚀 Running unit tests
          run : npm run test:unit
+         if  : always()
+
       -  name: 🚀 Running Storybook build
          run : npm run storybook:build
+         if  : always()
+
       -  name: 🚀 Running Stylelint checks
          run : npm run stylelint
+         if  : always()
+
       -  name: 🚀 Running Eslint checks
          run : npm run lint
+         if  : always()
