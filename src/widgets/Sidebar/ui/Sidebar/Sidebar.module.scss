@@ -24,3 +24,20 @@
 .lang {
     margin-left: 20px;
 }
+
+.collapsedBtn {
+    position: absolute;
+    right: -40px;
+    bottom: 30px;
+}
+
+.items {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.link {
+    margin-top: 10px;
+}

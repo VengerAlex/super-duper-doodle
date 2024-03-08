@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 
 const meta = {
     title: 'shared/Button',
@@ -24,6 +24,6 @@ export const Clear: Story = {
 export const Outline: Story = {
     args: {
         children: 'Outline Button',
-        theme: ThemeButton.OUTLINE,
+        theme: ButtonTheme.OUTLINE,
     },
 };
