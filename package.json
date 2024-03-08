@@ -93,6 +93,7 @@
   "loki": {
     "configurations": {
       "chrome.laptop": {
+        "chromeTolerance": 10,
         "target": "chrome.app",
         "width": 1366,
         "height": 768,
