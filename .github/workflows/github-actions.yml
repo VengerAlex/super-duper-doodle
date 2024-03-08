@@ -1,6 +1,10 @@
 name: GitHub Actions Demo
 run-name: GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 jobs:
   GitHub-Actions:
     runs-on: ubuntu-latest
@@ -19,7 +23,7 @@ jobs:
       -  name: 🚀 Building project
          run : npm run build:prod
       -  name: 🚀 Running unit tests
-         run : npm test:unit
+         run : npm run test:unit
       -  name: 🚀 Running Stylelint checks
          run : npm run stylelint
       -  name: 🚀 Running Eslint checks
