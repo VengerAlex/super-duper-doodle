@@ -24,8 +24,8 @@ jobs:
          run : npm run build:prod
       -  name: 🚀 Running unit tests
          run : npm run test:unit
-      -  name: 🚀 Running Screenshot testing
-         run : npm run test:ui:ci
+      -  name: 🚀 Running Storybook build
+         run : npm run storybook:build
       -  name: 🚀 Running Stylelint checks
          run : npm run stylelint
       -  name: 🚀 Running Eslint checks
