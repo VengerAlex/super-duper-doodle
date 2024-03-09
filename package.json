@@ -24,6 +24,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
+    "@reduxjs/toolkit": "^1.8.0",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
@@ -63,6 +64,7 @@
     "jest": "^27.5.1",
     "loki": "^0.34.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "react-redux": "^7.2.6",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
