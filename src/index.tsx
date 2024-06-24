@@ -7,6 +7,7 @@ import { StoreProvider } from 'app/providers/StoreProvider';
 
 import 'shared/config/i18n/i18n';
 
+
 render(
     <StoreProvider>
         <BrowserRouter>
