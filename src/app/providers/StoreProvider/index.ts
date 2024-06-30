@@ -1,3 +1,3 @@
-export type { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
+export type { StateSchema, ReduxStoreWithManager } from 'app/providers/StoreProvider/config/StateSchema';
 export { createReduxStore } from 'app/providers/StoreProvider/config/store';
 export { StoreProvider } from 'app/providers/StoreProvider/ui/StoreProvider';
