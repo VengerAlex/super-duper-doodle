@@ -5,5 +5,7 @@
   "Page not found": "Сторінку не знайдено",
   "Something terrible happened": "Щось погане сталось",
   "Reload page": "Перезагрузити сторінку",
-  "Log In": "Увійти"
+  "Log In": "Увійти",
+  "Enter username": "Введіть логін",
+  "Enter password": "Введіть пароль"
 }

@@ -1,3 +1,10 @@
-{
-  "profile": {"name":  "Alex"}
+ {
+  "profile": {"name":  "Alex"},
+   "users": [
+     {
+       "id": 1,
+       "username": "admin",
+       "password": 123
+     }
+   ]
 }
