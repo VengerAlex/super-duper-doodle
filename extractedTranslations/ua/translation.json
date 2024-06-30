@@ -6,9 +6,12 @@
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Log In": "Log In",
+  "Log Out": "Log Out",
   "Login": "Login",
   "Page not found": "Page not found",
+  "Registration Form": "Registration Form",
   "Reload page": "Reload page",
   "Something terrible happened": "Something terrible happened",
-  "Toggle": "Toggle"
+  "Toggle": "Toggle",
+  "You have entered incorrect username or password": "You have entered incorrect username or password"
 }
