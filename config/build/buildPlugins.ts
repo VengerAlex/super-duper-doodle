@@ -9,6 +9,7 @@ export const buildPlugins = ({
     paths,
     mode,
     isDev,
+    apiUrl,
 }: BuildOptions): webpack.WebpackPluginInstance[] => [
     new HtmlWebpackPlugin({ template: paths.html }),
     new webpack.ProgressPlugin(),
@@ -19,6 +20,7 @@ export const buildPlugins = ({
     new Dotenv({ path: `./.env.${mode}` }),
     new webpack.DefinePlugin({
         __IS_DEV__: JSON.stringify(isDev),
+        __API__: JSON.stringify(apiUrl),
     }),
     new webpack.HotModuleReplacementPlugin(),
 ];

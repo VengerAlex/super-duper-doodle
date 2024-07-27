@@ -1,5 +1,14 @@
  {
-  "profile": {"name":  "Alex"},
+  "profile": {
+    "first":  "Alex",
+    "lastname": "Venger",
+    "age": 21,
+    "currency": "USD",
+    "country": "Ukraine",
+    "city": "Lviv",
+    "username": "admin",
+    "avatar": "https://img.freepik.com/premium-photo/graphic-designer-digital-avatar-generative-ai_934475-9292.jpg"
+  },
    "users": [
      {
        "id": 1,

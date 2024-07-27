@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Fragment, ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 import { ReduxStoreWithManager } from 'app/providers/StoreProvider';
 import { StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema';
@@ -10,7 +10,7 @@ export type ReducersList = {
 
 interface DynamicModuleLoaderProps {
     reducers: ReducersList;
-    children: React.ReactNode;
+    children: ReactNode;
     removeAfterUnmount?: boolean;
 }
 
@@ -38,7 +38,7 @@ export const DynamicModuleLoader = ({
                 });
             }
         };
-    }, []);
+    }, [dispatch]);
 
-    return <>{children}</>;
+    return <div>{children }</div>;
 };
