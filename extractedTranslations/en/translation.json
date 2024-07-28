@@ -2,6 +2,7 @@
   "About this site": "About this site",
   "Change Language": "Change Language",
   "Change Theme": "Change Theme",
+  "Edit": "Edit",
   "Enter": "Enter",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
@@ -9,9 +10,12 @@
   "Log Out": "Log Out",
   "Login": "Login",
   "Page not found": "Page not found",
+  "Profile": "Profile",
   "Registration Form": "Registration Form",
   "Reload page": "Reload page",
   "Something terrible happened": "Something terrible happened",
   "Toggle": "Toggle",
-  "You have entered incorrect username or password": "You have entered incorrect username or password"
+  "You have entered incorrect username or password": "You have entered incorrect username or password",
+  "Your LastNae": "Your LastNae",
+  "Your Name": "Your Name"
 }
