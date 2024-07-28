@@ -5,6 +5,7 @@ import { getLoginIsLoading } from 'features/AuthByUsername/model/selectors/getLo
 describe('getLoginLoading', () => {
     test('should return true', () => {
         const state: DeepPartial<StateSchema> = {
+            // @ts-ignore
             loginForm: {
                 isLoading: true,
             },

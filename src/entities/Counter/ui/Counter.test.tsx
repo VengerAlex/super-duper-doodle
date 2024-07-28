@@ -4,12 +4,14 @@ import { Counter } from 'entities/Counter';
 
 describe('Counter', () => {
     test('should render initial value', () => {
+        // @ts-ignore
         componentRender(<Counter />, { initialState: { counter: { value: 0 } } });
 
         expect(screen.getByTestId('value-title')).toHaveTextContent('0');
     });
 
     test('should increment and decrement value', () => {
+        // @ts-ignore
         componentRender(<Counter />, { initialState: { counter: { value: 0 } } });
 
         const counterValue = screen.getByTestId('value-title');

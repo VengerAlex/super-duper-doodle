@@ -5,6 +5,7 @@ import { getLoginPassword } from 'features/AuthByUsername/model/selectors/getLog
 describe('getLoginPassword', () => {
     test('should return passed value', () => {
         const state: DeepPartial<StateSchema> = {
+            // @ts-ignore
             loginForm: {
                 password: 'password',
             },

@@ -1,6 +1,9 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import {
-    MouseEvent, ReactNode, useEffect, useState,
+    MouseEvent,
+    ReactNode,
+    useEffect,
+    useState,
 } from 'react';
 import cls from './Modal.module.scss';
 
@@ -37,7 +40,7 @@ export const Modal = (props: ModalProps) => {
         event.stopPropagation();
     };
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
     };
 

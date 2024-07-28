@@ -4,7 +4,7 @@ import { SidebarItemType } from 'widgets/Sidebar/model/items';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
-    item?: SidebarItemType
+    item: SidebarItemType
 }
 
 export const SidebarItem = ({ item }: SidebarItemProps) => {

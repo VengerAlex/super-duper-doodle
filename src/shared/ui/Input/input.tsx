@@ -65,6 +65,7 @@ export const Input = memo((props: InputProps) => {
             )}
             <div className={cls.caretWrapper}>
                 <input
+                    // @ts-ignore
                     ref={ref}
                     onBlur={onBlur}
                     onFocus={onFocus}
