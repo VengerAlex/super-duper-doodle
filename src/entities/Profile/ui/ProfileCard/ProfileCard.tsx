@@ -1,34 +1,113 @@
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import { getProfileData } from 'entities/Profile/model/selectors/getProfileData/getProfileData';
-import { getProfileError } from 'entities/Profile/model/selectors/getProfileError/getProfileError';
-import { getProfileIsLoading } from 'entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Text } from 'shared/ui/Text/Text';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Input } from 'shared/ui/Input/input';
+import { Profile } from 'entities/Profile';
+import { Loader } from 'shared/ui/Loader';
+import { Avatar } from 'shared/ui/Avatar';
+import { Currency, CurrencySelect } from 'entities/Currency';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
-    className?: string
+    className?: string;
+    data?: Profile
+    error?: string;
+    isLoading?: boolean;
+    onChangeLastname: (value?: string) => void;
+    onChangeFirstname: (value?: string) => void;
+    onChangeCity: (value?: string) => void;
+    onChangeAge: (value?: string) => void;
+    onChangeUsername: (value?: string) => void;
+    onChangeAvatar: (value?: string) => void;
+    onChangeCurrency: (currency: Currency) => void;
+    readOnly?: boolean
 }
 
-export const ProfileCard = ({ className }: ProfileCardProps) => {
+export const ProfileCard = ({
+    className,
+    data,
+    isLoading,
+    error,
+    onChangeLastname,
+    onChangeFirstname,
+    onChangeCity,
+    onChangeAge,
+    onChangeUsername,
+    onChangeAvatar,
+    onChangeCurrency,
+    readOnly,
+}: ProfileCardProps) => {
     const { t } = useTranslation('profile');
 
-    const data = useSelector(getProfileData);
-    const isLoading = useSelector(getProfileError);
-    const error = useSelector(getProfileIsLoading);
+    if (isLoading) {
+        return (
+            <div className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+                <Loader />
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className={classNames(cls.ProfileCard, { }, [className, cls.error])}>
+                <Text
+                    theme={TextTheme.ERROR}
+                    title={t('Error happened while loading profile')}
+                    text={t('Try to reload the page')}
+                    align={TextAlign.CENTER}
+                />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.ProfileCard, {}, [className])}>
-            <div className={cls.header}>
-                <Text title={t('Profile')} />
-                <Button className={cls.editBtn} theme={ButtonTheme.OUTLINE}>{t('Edit')}</Button>
-            </div>
             <div className={cls.data}>
-                <Input value={data?.first} placeholder={t('Your Name')} className={cls.input} />
-                <Input value={data?.lastname} placeholder={t('Your LastNae')} className={cls.input} />
+                {data?.avatar && <Avatar src={data?.avatar} className={cls.avatar} alt="User Avatar" />}
+                <Input
+                    value={data?.first}
+                    onChange={onChangeFirstname}
+                    placeholder={t('Your Name')}
+                    className={cls.input}
+                    readOnly={readOnly}
+                />
+                <Input
+                    value={data?.lastname}
+                    onChange={onChangeLastname}
+                    placeholder={t('Your LastNae')}
+                    className={cls.input}
+                    readOnly={readOnly}
+                />
+                <Input
+                    type="number"
+                    value={data?.age}
+                    onChange={onChangeAge}
+                    placeholder={t('Your Age')}
+                    className={cls.input}
+                    readOnly={readOnly}
+                />
+                <Input
+                    value={data?.city}
+                    onChange={onChangeCity}
+                    placeholder={t('Your City')}
+                    className={cls.input}
+                    readOnly={readOnly}
+                />
+                <Input
+                    value={data?.username}
+                    onChange={onChangeUsername}
+                    placeholder={t('Your Username')}
+                    className={cls.input}
+                    readOnly={readOnly}
+                />
+                <Input
+                    value={data?.avatar}
+                    onChange={onChangeAvatar}
+                    placeholder={t('Your Avatar')}
+                    className={cls.input}
+                    readOnly={readOnly}
+                />
+                <CurrencySelect value={data?.currency} onChange={onChangeCurrency} readOnly={readOnly} />
             </div>
         </div>
     );

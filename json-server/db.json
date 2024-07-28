@@ -1,19 +1,19 @@
- {
+{
   "profile": {
-    "first":  "Alex",
+    "first": "Alex123",
     "lastname": "Venger",
     "age": 21,
-    "currency": "USD",
+    "currency": "EUR",
     "country": "Ukraine",
     "city": "Lviv",
     "username": "admin",
     "avatar": "https://img.freepik.com/premium-photo/graphic-designer-digital-avatar-generative-ai_934475-9292.jpg"
   },
-   "users": [
-     {
-       "id": 1,
-       "username": "admin",
-       "password": "123"
-     }
-   ]
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123"
+    }
+  ]
 }

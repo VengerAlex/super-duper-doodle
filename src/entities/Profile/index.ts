@@ -1,3 +1,9 @@
+export { updateProfileData } from 'entities/Profile/model/services/updateProfileData/updateProfileData';
+export { getProfileForm } from 'entities/Profile/model/selectors/getProfileForm/getProfileForm';
+export { getProfileReadonly } from 'entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly';
+export { getProfileData } from 'entities/Profile/model/selectors/getProfileData/getProfileData';
+export { getProfileError } from 'entities/Profile/model/selectors/getProfileError/getProfileError';
+export { getProfileIsLoading } from 'entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading';
 export { ProfileCard } from 'entities/Profile/ui/ProfileCard/ProfileCard';
 export { Profile, ProfileSchema } from 'entities/Profile/model/types/profile';
 export { profileActions, profileReducer } from './model/slice/profileSlice';
